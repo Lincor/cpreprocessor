@@ -1,5 +1,6 @@
+CC=cc
 default:
-	clang test.c filestack.c stage1.c stage2.c stage3.c
+	$(CC) test.c filestack.c stage1.c stage2.c stage3.c -o test
 
 debug:
-	clang -g test.c filestack.c stage1.c stage2.c stage3.c
+	$(CC) -g test.c filestack.c stage1.c stage2.c stage3.c -o test
