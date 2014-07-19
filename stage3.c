@@ -24,6 +24,7 @@ void stage3(FILE *input, FILE *output)
 
 char *include_path(char *, char);
 
+/* Adds file from '#include "<file>"' into the filestack */
 void handle_include(char *include)
 {
 	FILE *f;
@@ -58,6 +59,7 @@ void handle_include(char *include)
 
 char *strcat2(const char *, const char*);
 
+/* Returns path to including file */
 char *include_path(char *filename, char type)
 {
 	if (type == '"')
@@ -68,6 +70,7 @@ char *include_path(char *filename, char type)
 		return NULL;
 }
 
+/* Concatenates two lines in new one */
 char *strcat2(const char *s1, const char *s2)
 {
 	char *s = malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));

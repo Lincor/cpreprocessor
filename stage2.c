@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "stage2.h"
 
+/* Removes comments */
 void stage2(FILE *input, FILE *output)
 {
 	enum { S_NONE, S_LINE_COMMENT, S_COMMENT, S_STRING } state = S_NONE;
